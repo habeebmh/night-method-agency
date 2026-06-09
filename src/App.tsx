@@ -407,13 +407,7 @@ function HabeebEpk() {
               </p>
             </div>
             <aside className="border border-[#f5f1e8]/18 bg-[#050504]/72 p-5 backdrop-blur-md" data-reveal style={{ '--reveal-delay': '240ms' } as CSSProperties}>
-              <p className="text-[11px] font-black uppercase tracking-[0.28em] text-[#d94b2b]">
-                Prepared by
-              </p>
-              <p className="mt-3 text-2xl font-black uppercase tracking-normal">
-                Night Method Agency
-              </p>
-              <div className="mt-6 grid gap-3">
+              <div className="grid gap-3">
                 {habeebLinks.map((link) => {
                   const Icon = link.icon
                   return (
