@@ -7,6 +7,7 @@ import {
   Disc3,
   Download,
   ExternalLink,
+  Images,
   Mail,
   Megaphone,
   Music2,
@@ -53,6 +54,11 @@ const habeebLinks = [
     label: 'YouTube',
     href: 'https://www.youtube.com/@habeeeeeeeeeeeeeeb',
     icon: Play,
+  },
+  {
+    label: 'Media Photos',
+    href: 'https://www.dropbox.com/scl/fo/w9zi2bpj6bmju437i6o9f/ABbZlK82duliRSiwDjpLbpU?rlkey=1xtwl2anlcdf1xr5rtsztf0nd&dl=0',
+    icon: Images,
   },
 ]
 
