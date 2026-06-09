@@ -1,0 +1,33 @@
+{
+  "functions": {
+    "source": "functions"
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/habeeb/epk-pdf",
+        "destination": "/api/habeeb/epk-pdf",
+        "type": 302
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/api/habeeb/audience-stats",
+        "function": "getHabeebAudienceStats"
+      },
+      {
+        "source": "/api/habeeb/epk-pdf",
+        "function": "getHabeebEpkPdf"
+      },
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
