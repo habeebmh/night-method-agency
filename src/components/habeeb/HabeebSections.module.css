@@ -1,0 +1,82 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  padding-top: 6rem;
+}
+
+.heroImage,
+.backgroundImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 6, 5, 0.96), rgba(7, 6, 5, 0.7) 44%, rgba(7, 6, 5, 0.22)),
+    linear-gradient(0deg, rgba(7, 6, 5, 0.94), rgba(7, 6, 5, 0) 42%);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.green {
+  color: #c7ff5c;
+}
+
+.red {
+  color: #d94b2b;
+}
+
+.paleSection {
+  background: #f5f1e8;
+  color: #171310;
+}
+
+.darkSection {
+  background: #0a0908;
+  color: #f5f1e8;
+}
+
+.splitSection {
+  display: grid;
+  background: #10100e;
+}
+
+.splitImage {
+  position: relative;
+  min-height: 58svh;
+  overflow: hidden;
+}
+
+.contactSection {
+  position: relative;
+  overflow: hidden;
+  background: #0a0908;
+}
+
+.contactOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 9, 8, 0.98), rgba(10, 9, 8, 0.76), rgba(10, 9, 8, 0.46));
+}
+
+@media (min-width: 1024px) {
+  .splitSection {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+
+  .splitImage {
+    min-height: 100svh;
+    clip-path: polygon(0 0, 96% 0, 86% 100%, 0 100%);
+  }
+}

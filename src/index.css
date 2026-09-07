@@ -31,26 +31,6 @@ body {
   overflow-x: hidden;
 }
 
-.site-shell {
-  position: relative;
-  isolation: isolate;
-}
-
-.site-shell::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-  pointer-events: none;
-  opacity: 0.09;
-  background-image:
-    linear-gradient(rgba(245, 241, 232, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245, 241, 232, 0.08) 1px, transparent 1px);
-  background-size: 44px 44px;
-  mix-blend-mode: screen;
-}
-
-
 button,
 a {
   -webkit-tap-highlight-color: transparent;
@@ -59,23 +39,6 @@ a {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-.brand-cta:hover,
-.brand-cta:focus,
-.brand-cta:focus-visible,
-.brand-cta:active {
-  border-color: #c7ff5c !important;
-  color: #11100e !important;
-  background: #c7ff5c !important;
-}
-
-.brand-cta:hover *,
-.brand-cta:focus *,
-.brand-cta:focus-visible *,
-.brand-cta:active * {
-  color: #11100e !important;
-  stroke: #11100e !important;
 }
 
 ::selection {
@@ -92,7 +55,7 @@ footer {
   scroll-snap-align: end;
 }
 
-.epk-shell section {
+[class*="epkShell"] section {
   scroll-snap-align: none;
   scroll-snap-stop: normal;
 }
@@ -177,21 +140,21 @@ footer {
     background: #0a0908;
   }
 
-  .epk-shell header {
+  [class*="epkShell"] header {
     position: static;
   }
 
-  .epk-shell [data-reveal],
-  .epk-shell [data-image-motion],
-  .epk-shell [data-line-reveal],
-  .epk-shell [data-drift-number] {
+  [class*="epkShell"] [data-reveal],
+  [class*="epkShell"] [data-image-motion],
+  [class*="epkShell"] [data-line-reveal],
+  [class*="epkShell"] [data-drift-number] {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
     filter: none !important;
   }
 
-  .epk-shell section {
+  [class*="epkShell"] section {
     min-height: auto !important;
     page-break-inside: avoid;
   }

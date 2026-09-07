@@ -1,0 +1,123 @@
+.siteShell,
+.epkShell {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+  background: #0a0908;
+  color: #f5f1e8;
+}
+
+.siteShell::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.09;
+  background-image:
+    linear-gradient(rgba(245, 241, 232, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 241, 232, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mix-blend-mode: screen;
+}
+
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 30;
+  border-bottom: 1px solid rgba(245, 241, 232, 0.12);
+  background: rgba(10, 9, 8, 0.6);
+  padding: 1rem 1.25rem;
+  backdrop-filter: blur(24px);
+}
+
+.epkHeader {
+  background: rgba(10, 9, 8, 0.7);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.brandMark {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #c7ff5c;
+  color: #11100e;
+}
+
+.navLinks {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  color: rgba(245, 241, 232, 0.7);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.navLinks a {
+  transition: color 160ms ease;
+}
+
+.navLinks a:hover {
+  color: #c7ff5c;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-top: 1px solid rgba(245, 241, 232, 0.12);
+  background: #0a0908;
+  padding: 2rem 1.25rem;
+  color: rgba(245, 241, 232, 0.55);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 640px) {
+  .header,
+  .footer {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  .navLinks {
+    display: flex;
+  }
+
+  .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header,
+  .footer {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}

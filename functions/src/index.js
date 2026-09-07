@@ -36,6 +36,10 @@ const links = [
     href: 'https://open.spotify.com/artist/6N3UeEjvxjQJBiky7YD2IF?si=pMSf1ELpQbOuu5G1CAbK8A',
   },
   {
+    label: 'Apple Music',
+    href: 'https://music.apple.com/pl/artist/habeeb/1807136020',
+  },
+  {
     label: 'YouTube',
     href: 'https://www.youtube.com/@habeeeeeeeeeeeeeeb',
   },
@@ -286,27 +290,28 @@ function drawSoundPage(pdf, backgroundImage, cache) {
   pdf.text(`PUBLIC PROFILE DATA REFRESHED ${formatAudienceTimestamp(cache.updatedAt).toUpperCase()}.`, 340, 445)
 
   links.forEach((link, index) => {
-    const y = 492 + index * 37
-    drawDarkPanel(pdf, 45, y, 522, 33)
+    const y = 480 + index * 34
+    drawDarkPanel(pdf, 45, y, 522, 30)
     pdf.setTextColor(199, 255, 92)
     pdf.setFontSize(8)
-    pdf.text(link.label.toUpperCase(), 55, y + 13)
+    pdf.text(link.label.toUpperCase(), 55, y + 12)
     pdf.setTextColor(245, 241, 232)
     pdf.setFont('helvetica', 'normal')
     pdf.setFontSize(7)
-    pdf.text(link.href, 55, y + 24)
+    pdf.text(link.href, 55, y + 22)
     pdf.setFont('helvetica', 'bold')
+    pdf.link(45, y, 522, 30, { url: link.href })
   })
 
-  drawDarkPanel(pdf, 45, 672, 522, 78)
+  drawDarkPanel(pdf, 45, 660, 522, 90)
   pdf.setTextColor(245, 241, 232)
   pdf.setFontSize(16)
-  pdf.text('BOOKINGS, PRESS, AND MANAGEMENT INQUIRIES.', 60, 700)
+  pdf.text('BOOKINGS, PRESS, AND MANAGEMENT INQUIRIES.', 60, 688)
   pdf.setFont('helvetica', 'normal')
   pdf.setFontSize(11)
   pdf.setTextColor(214, 210, 202)
   const contact = 'This EPK was prepared by Night Method Agency for Habeeb. For routing, press materials, performance context, or direct artist inquiries, contact bookings@nightmethodagency.com.'
-  pdf.text(pdf.splitTextToSize(contact, 480), 60, 725, { lineHeightFactor: 1.35 })
+  pdf.text(pdf.splitTextToSize(contact, 480), 60, 713, { lineHeightFactor: 1.35 })
 
   drawFooter(pdf, 'bookings@nightmethodagency.com', '03')
 }

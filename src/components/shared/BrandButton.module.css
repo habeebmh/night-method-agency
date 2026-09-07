@@ -1,0 +1,29 @@
+.button {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.75rem;
+  background: #050504;
+  color: #f5f1e8;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.button:hover,
+.button:focus,
+.button:focus-visible,
+.button:active {
+  border-color: #c7ff5c !important;
+  color: #11100e !important;
+  background: #c7ff5c !important;
+}
+
+.button:hover *,
+.button:focus *,
+.button:focus-visible *,
+.button:active * {
+  color: #11100e !important;
+  stroke: #11100e !important;
+}

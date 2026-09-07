@@ -28,6 +28,7 @@ const links = {
   soundcloud: 'https://soundcloud.com/habeeeeeeeeeeeeeeeb',
   spotify:
     'https://open.spotify.com/artist/6N3UeEjvxjQJBiky7YD2IF?si=pMSf1ELpQbOuu5G1CAbK8A',
+  appleMusic: 'https://music.apple.com/pl/artist/habeeb/1807136020',
   youtube: 'https://www.youtube.com/@habeeeeeeeeeeeeeeb',
 }
 
@@ -485,6 +486,10 @@ const html = String.raw`
           <a class="link" href="${links.spotify}">
             <span class="link-name">Spotify</span>
             <span class="link-url">${links.spotify}</span>
+          </a>
+          <a class="link" href="${links.appleMusic}">
+            <span class="link-name">Apple Music</span>
+            <span class="link-url">${links.appleMusic}</span>
           </a>
           <a class="link" href="${links.youtube}">
             <span class="link-name">YouTube</span>
