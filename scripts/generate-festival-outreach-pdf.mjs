@@ -26,7 +26,7 @@ I'm writing on behalf of Habeeb, a Dallas-based House and Tech House artist, for
 
 La Kasbah's House and Tech House direction is a natural match for a set built around heavy low end, UK Garage and Bassline accents, and an experimental edge. Seeing Dennis Cruz and Nic Fanciulli in the 2026 program also makes the fit clear: Habeeb can bring a dynamic performance that stays grounded in the groove while adding a sharper garage pulse.
 
-He performed at Breakaway Dallas in 2026 and is booked for the upcoming Breakaway Houston. He has also signed two records to Animarum, scheduled for release on September 18.
+He performed at Breakaway Dallas in 2026 and is booked for the upcoming Breakaway Houston. He also has two records released on Animarum as of September 18.
 
 Current music and materials are in the [Habeeb EPK](https://nightmethodagency.com/habeeb).
 
@@ -48,7 +48,7 @@ I'm reaching out on behalf of Habeeb, a Dallas-based House and Tech House artist
 
 Horst's pairing of experimental electronic programming with stages shaped around architecture and space suits how Habeeb approaches a set: as a dynamic performance, not a fixed run of tracks. Todd Edwards and Daphni in the 2026 program are useful reference points for the groove, swing, and left-turn energy he brings, with UK Garage and Bassline threaded through his House foundation.
 
-Habeeb performed at Breakaway Dallas in 2026, and he's booked for the upcoming Breakaway Houston. He also has an upcoming Animarum label showcase in Berlin in spring 2027, which makes a European festival date timely.
+Habeeb performed at Breakaway Dallas in 2026, and he's booked for the upcoming Breakaway Houston. He also has two records released on Animarum and an upcoming Animarum label showcase in Berlin in spring 2027, which makes a European festival date timely.
 
 Current music and materials are in the [Habeeb EPK](https://nightmethodagency.com/habeeb).
 
