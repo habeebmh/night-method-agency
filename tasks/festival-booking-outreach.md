@@ -209,7 +209,7 @@ Mandatory credits for every future outreach email:
 - Opening for James Kennedy
 - Opening/support for Benjamin Lloyd
 
-Keep completion status accurate. As last confirmed, Breakaway Dallas 2026 and James Kennedy support are completed; Breakaway Houston 2026 and Benjamin Lloyd support are upcoming. Recheck current context each run and change upcoming wording to completed only when confirmed. Do not invent a year for either support appearance.
+The user confirmed on September 22, 2026 that all four appearances are completed. Describe Habeeb as having played Breakaway Dallas 2026 and Breakaway Houston 2026, and having opened for James Kennedy and Benjamin Lloyd. Never describe any of these four appearances as upcoming. Do not invent a year for either support appearance.
 
 Optional additional credentials, only when relevant and space permits:
 
