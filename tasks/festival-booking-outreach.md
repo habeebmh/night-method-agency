@@ -2,6 +2,24 @@
 
 Schedule: Every Monday at 3:00 PM America/Chicago
 
+## Required outcome and run procedure
+
+The manager needs new booking opportunities she can act on. Reissuing the same leads with a new date or revised artist credentials is not a successful run.
+
+1. Read the automation memory, `tasks/festival-outreach/delivery-history.json`, and prior dated research records before researching. Festival outreach sent by the user and packets delivered to Joanna are separate states.
+2. Research at least 15 distinct candidates not previously delivered to Joanna, across at least three countries and both the Americas and Europe. Deepen contact research for at least five plausible candidates. These are research requirements, not inclusion quotas: never relax qualification to reach a count. If access or a depleted candidate pool prevents this coverage, record the shortfall and specific blocker honestly.
+3. Record every screened candidate in `tasks/festival-outreach/YYYY-MM-DD.json`: stable festival-edition ID, outcome (`qualified`, `excluded`, or `blocked`), reason, source URLs, and the next check needed for blocked targets. Preserve these records between runs. Do not repeatedly investigate a known exclusion without new evidence or a new edition.
+4. Recheck previously delivered, still-unsent targets. Keep every target that still qualifies, clearly marked RETAINED and placed after new opportunities. Record why any target no longer qualifies; never silently drop it.
+5. For each included entry record current-run evidence for edition/lineup, public-application checks, contact/role, and previous programming. Each evidence object must contain `checkedAt`, a factual `finding`, and `urls`. An old memory entry or a search snippet alone is not verification; read the supporting pages and resolve conflicts.
+6. Build with `node scripts/generate-festival-outreach-pdf.mjs`. The generator reads only the current America/Chicago dated JSON, validates it against delivery history, and rejects stale evidence or a packet with no new opportunity or verified contact change. Never bypass this check, rename IDs, clear history, or rewrite contact titles to manufacture novelty. A title formatting change is not a contact change.
+7. Run `node --test scripts/festival-outreach-*.test.mjs`. Render and inspect every PDF page, extract the text, check the emails and links, and verify that every lead has an appropriate professional route. Test success alone does not verify research or PDF layout.
+8. Before Gmail send, re-read delivery history and search the connected account's SENT messages for this run's subject/recipient. If already sent, verify that attachment and reconcile history without resending. If a send result is ambiguous, search/read back before retrying. Only send the exact PDF that passed review.
+9. After successful Gmail read-back, append the delivery date, message ID, PDF SHA-256, and each included entry's stable ID/contact/email to `delivery-history.json`. Save the run outcome, unresolved research and next discovery directions in automation memory with the current run time. Commit and push the scoped changes.
+
+If no new qualified opportunity or verified contact route emerges, save the research and report the result to the user. Do not email Joanna another unchanged packet. This rule supersedes the former requirement to generate and email a PDF on every run. Do not label a repeat-only run complete research unless the coverage above was actually performed.
+
+Use the existing dated JSON as the schema example. Each entry also requires `festival`, `location`, `contact`, `email`, `subject`, `body`, `priority` (numeric string), `action`, and `fit`. The generator derives NEW/CONTACT UPDATED/RETAINED from delivery history. A changed email recipient additionally requires `contactChange` explaining the source-supported improvement. Renaming a decision-maker at the same inbox is conservatively treated as RETAINED, not sufficient reason to send a packet. The generator also rejects a run date with an existing delivery receipt. Keep confirmed-sent IDs synchronized with the list below only when the user explicitly reports a send.
+
 Find House/EDM/electronic music festivals in the United States and internationally that would be a credible booking fit for Habeeb and that meet ALL of these conditions at the time of the run:
 
 1. The festival has not announced its official artist lineup for the relevant upcoming edition.
@@ -86,9 +104,11 @@ For every festival, verify from current public sources that:
 
 If either condition cannot be verified, do not include the festival.
 
+For a negative application check, review the official home, lineup, FAQ, contact, participation pages and available official announcements, plus targeted artist/DJ submission searches. State the scope as "No public artist/DJ application found on the reviewed sources as of [date]" rather than claiming exhaustive proof. An announced future application window counts as a public process even before it opens. A no-submissions policy does not make a general inbox a valid booking route: resolve the actual stage/promoter contact. General enquiries are acceptable for a named decision-maker only when not restricted to ticketing, press, emergencies or an express no-pitch policy.
+
 ## PDF deliverable
 
-Always create a clean, forwardable MANAGER OUTREACH PACKET as a PDF.
+Create a clean, forwardable MANAGER OUTREACH PACKET as a PDF when the delivery check passes.
 
 Use `scripts/generate-festival-outreach-pdf.mjs` as the only PDF writer. The generator must validate that at least one complete, send-ready entry exists before touching the dated output and must replace the final file only after a temporary PDF is written successfully. Do not add another generator that targets the same output filename.
 
@@ -97,6 +117,8 @@ The filename must include the generation date in `YYYY-MM-DD` format:
 `Habeeb_Manager_Outreach_YYYY-MM-DD.pdf`
 
 Display the generation date prominently near the title inside the PDF.
+
+Start with a manager action queue: label each entry NEW, CONTACT UPDATED or RETAINED; name the recipient, explain fit and any practical limitation, and give a specific next action. New opportunities come first. Include concise linked verification notes outside the outreach copy so Joanna can check dates, contacts and qualification. Do not imply a general routing inbox is a direct personal contact or that an early booking request guarantees an available slot.
 
 Include EVERY still-unsent qualifying festival from prior runs plus any newly discovered qualifying festivals.
 
@@ -242,7 +264,7 @@ Subject:
 
 Use the current America/Chicago run date.
 
-Keep the Gmail body brief and state that the attached PDF contains the current send-ready festival outreach.
+Keep the Gmail body brief. Name the new opportunities and explain what Joanna should do first. State the new/updated/retained counts and any material routing limitation. An apology or a changed PDF date is not actionable content.
 
 Attach the generated PDF itself.
 
@@ -258,4 +280,4 @@ After every run, commit the festival-outreach task changes, generator and tests,
 
 ## Discovery priority
 
-Prioritize novelty in discovery, but retain every previously found unsent qualifying festival until the user explicitly reports that outreach for that exact edition was sent.
+Prioritize novelty in discovery. Retain previously found unsent qualifying festivals in the research record and in packets that pass the delivery check. Prior inclusion never means contacted. If no useful change occurs, preserve the queue without emailing it again. Rotate markets, promoters and stage partners based on prior research instead of repeatedly searching the same festival names.

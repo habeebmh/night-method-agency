@@ -1,0 +1,537 @@
+{
+  "date": "2026-09-22",
+  "entries": [
+    {
+      "id": "monegros-2027",
+      "festival": "Monegros Desert Festival 2027",
+      "location": "Fraga, Spain | 2027 edition; confirm date and routing before quoting",
+      "contact": "Victor de la Serna, Music Director, elrow / Monegros / Florida 135",
+      "email": "info@monegrosfestival.com",
+      "priority": "1",
+      "subject": "For Victor de la Serna: Habeeb / Monegros 2027",
+      "action": "Send the draft this week to the published festival inbox, requesting routing to Victor de la Serna. Ask whether House / Tech House programming is taking proposals before discussing fees.",
+      "fit": "Strongest new stylistic match. General routing address, not Victor's personal inbox; a large international festival remains a competitive booking.",
+      "body": "Hi Victor,\n\nI'm Joanna Biehler at Night Method Agency, representing Habeeb. I'm reaching out about House / Tech House consideration for Monegros 2027.\n\nYour archive includes Joseph Capriati and Seth Troxler, which gives me a specific reason to approach the house side of the programme. Habeeb works from a House / Tech House foundation with an experimental edge, treating his sets as dynamic performances. I'd like you to hear his work before deciding whether there's a place for him in your plans.\n\nHe played Breakaway Dallas 2026 and Green Light Social / Sunset Sessions in Dallas, and has an Animarum label showcase in Berlin scheduled for spring 2027. We can discuss availability and travel separately from that engagement.\n\nMusic and background: [Habeeb EPK](https://nightmethodagency.com/habeeb).\n\nWould you consider him for the 2027 programme? If this reaches the general team, please forward it to Victor or Monegros music programming.\n\nBest,\nJoanna Biehler\nNight Method Agency",
+      "evidence": {
+        "edition": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official 2027 ticket signup promises future artist announcements; the live artists page returned empty artist and sub-lineup lists. No 2027 lineup found.",
+          "urls": [
+            "https://monegrosfestival.com/en/tickets?direct=true",
+            "https://monegrosfestival.com/en/artists"
+          ]
+        },
+        "applications": {
+          "checkedAt": "2026-09-22",
+          "finding": "No public DJ/music application found in home, artists, FAQ, Work With Us and targeted searches. Published forms cover session staff (closed), food trucks, press and scenic performers, not DJ bookings.",
+          "urls": [
+            "https://monegrosfestival.com/en/work-with-us",
+            "https://monegrosfestival.com/en/faqs",
+            "https://elrow.com/es/artists-community/artists"
+          ]
+        },
+        "contact": {
+          "checkedAt": "2026-09-22",
+          "finding": "The 2026 conference speaker biography explicitly identifies Victor as music director overseeing Monegros talent curation. Festival footer publishes info@monegrosfestival.com; use as a routing request only.",
+          "urls": [
+            "https://funbusinessdays.com/valencia/speakers/victor-de-la-serna/",
+            "https://monegrosfestival.com/en/tickets?direct=true"
+          ]
+        },
+        "programming": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official DJ-set archive lists Joseph Capriati (2024) and Seth Troxler (2023). These are previous bookings, not 2027 announcements.",
+          "urls": [
+            "https://monegrosfestival.com/en/dj-sets"
+          ]
+        }
+      }
+    },
+    {
+      "id": "gottwood-2027",
+      "festival": "Gottwood Festival 2027",
+      "location": "Anglesey, Wales, UK | 10-13 June 2027",
+      "contact": "Tom Carpenter, Gottwood co-founder",
+      "email": "info@gottwood.co.uk",
+      "priority": "2",
+      "subject": "For Tom Carpenter: Habeeb for Gottwood 2027",
+      "action": "Ask the general festival team to route the draft to Tom Carpenter / programming. Confirm 10-13 June availability and whether an emerging overseas artist fits the 2027 programme.",
+      "fit": "House and UK club crossover fit, supported by Conducta and Oppidan on the 2026 bill. Boutique curation and travel costs make this selective, not an assumed opening.",
+      "body": "Hi Tom,\n\nConducta and Oppidan on Gottwood's 2026 bill caught my attention because they connect the house floor with the wider UK club sound. I'd like to introduce Habeeb for 2027 through that part of the programme.\n\nI'm Joanna Biehler, his manager at Night Method Agency. He's a House / Tech House artist with an experimental edge, and his sets are dynamic performances. The smaller, distinctly programmed spaces at Gottwood are why I'm approaching you with an artist proposal rather than a general festival introduction.\n\nHabeeb has played Green Light Social / Sunset Sessions in Dallas and opened for James Kennedy, with Benjamin Lloyd support upcoming. For Gottwood, I'd focus the conversation on the music in his EPK and a set suited to your house and garage programming.\n\nYou can hear his work here: [Habeeb EPK](https://nightmethodagency.com/habeeb).\n\nWould you consider him for Gottwood 2027? If necessary, please pass this to Tom or the programming team.\n\nBest,\nJoanna Biehler\nNight Method Agency",
+      "evidence": {
+        "edition": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official homepage announces 10-13 June 2027; promoter's 2027 RA listing has lineup TBC.",
+          "urls": [
+            "https://www.gottwood.co.uk/",
+            "https://ra.co/events/2437471"
+          ]
+        },
+        "applications": {
+          "checkedAt": "2026-09-22",
+          "finding": "No public artist/DJ call found on official homepage, information pages and targeted searches. The advertised volunteer application is for stewarding, artist liaison, art/decor and site roles.",
+          "urls": [
+            "https://www.gottwood.co.uk/info/",
+            "https://www.gottwood.co.uk/"
+          ]
+        },
+        "contact": {
+          "checkedAt": "2026-09-22",
+          "finding": "Current festival information publishes info@gottwood.co.uk. May 2026 coverage identifies Tom Carpenter as co-founder; route to him as promoter principal, without claiming a personal inbox.",
+          "urls": [
+            "https://www.gottwood.co.uk/info/",
+            "https://edmidentity.com/2026/05/18/gottwood-best-kept-festival-secrets/"
+          ]
+        },
+        "programming": {
+          "checkedAt": "2026-09-22",
+          "finding": "Gottwood's promoter-managed 2026 RA listing includes Conducta and Oppidan.",
+          "urls": [
+            "https://ra.co/events/2187777"
+          ]
+        }
+      }
+    },
+    {
+      "id": "houghton-2027",
+      "festival": "Houghton Festival 2027",
+      "location": "Norfolk, England, UK | 2027 dates not yet announced",
+      "contact": "Craig Richards, founder and creative director",
+      "email": "info@houghtonfestival.co.uk",
+      "priority": "3",
+      "subject": "For Craig Richards: Habeeb / Houghton 2027 consideration",
+      "action": "Send as a lower-priority curator introduction, addressed to Craig Richards through the published general inbox. Ask for consideration; do not quote dates or imply confirmed availability.",
+      "fit": "A stretch target for the experimental house side of the project. Highly selective curation; dates and slots are unconfirmed.",
+      "body": "Hi Craig,\n\nI'm writing with an artist introduction for Houghton's 2027 planning. Seeing Peach and Shanti Celeste on the 2026 programme made me think the experimental house side of Habeeb's work could be worth your consideration.\n\nI'm Joanna Biehler at Night Method Agency, and I manage Habeeb. His foundation is House / Tech House, with an experimental edge and an approach to sets as dynamic performances. I'd welcome your view on whether his sound belongs in the programme before we discuss any particular stage or time.\n\nHe has played Friends Only and Vice Park. He's also scheduled for an Animarum label showcase in Berlin in spring 2027; any Houghton booking would be planned separately once your dates are confirmed.\n\nMusic and artist information: [Habeeb EPK](https://nightmethodagency.com/habeeb).\n\nWould you consider him for 2027? Please route this to Craig or the music programming team if needed.\n\nBest,\nJoanna Biehler\nNight Method Agency",
+      "evidence": {
+        "edition": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official FAQ explicitly says 2027 dates are coming soon and tickets are not yet on sale. No 2027 artist announcement found on the reviewed official music/home pages.",
+          "urls": [
+            "https://www.houghtonfestival.co.uk/faqs/",
+            "https://www.houghtonfestival.co.uk/"
+          ]
+        },
+        "applications": {
+          "checkedAt": "2026-09-22",
+          "finding": "No public artist/DJ application found in official home, FAQ, music, contact and targeted searches. Future volunteer information is separate from artist selection.",
+          "urls": [
+            "https://www.houghtonfestival.co.uk/faqs/",
+            "https://www.houghtonfestival.co.uk/contact/"
+          ]
+        },
+        "contact": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official contact page publishes info@houghtonfestival.co.uk for general enquiries. June 2026 DJ Mag reporting identifies Craig Richards as founder and creative director; official homepage also credits his musical vision.",
+          "urls": [
+            "https://www.houghtonfestival.co.uk/contact/",
+            "https://djmag.com/news/houghton-2026-line-announced",
+            "https://www.houghtonfestival.co.uk/"
+          ]
+        },
+        "programming": {
+          "checkedAt": "2026-09-22",
+          "finding": "The 2026 lineup announcement includes Peach and Shanti Celeste. This is a programming connection, not a claim of a relationship with Habeeb.",
+          "urls": [
+            "https://djmag.com/news/houghton-2026-line-announced"
+          ]
+        }
+      }
+    },
+    {
+      "id": "marvellous-island-2027",
+      "festival": "Marvellous Island Festival 2027",
+      "location": "Torcy, France | 15-16 May 2027",
+      "contact": "Laurent Kemler, Artistic Director and music programmer",
+      "email": "laurent@nuit-sauvage.com",
+      "priority": "4",
+      "subject": "Habeeb for Marvellous Island 2027 / La Kasbah",
+      "action": "RETAINED: if you have not already sent the earlier draft, write directly to Laurent about the La Kasbah House / Tech House programme. Check availability for 15-16 May first.",
+      "fit": "Direct published professional email and a named House / Tech House stage. Not a new lead; no new contact claimed.",
+      "body": "Hi Laurent,\n\nI'm Joanna Biehler at Night Method Agency, reaching out about Habeeb for Marvellous Island 2027. La Kasbah's House / Tech House focus looks like the most relevant place to start the conversation.\n\nYour 2026 booking of Nic Fanciulli gives me a concrete programming connection for Habeeb's House / Tech House foundation. He brings an experimental edge and treats his sets as dynamic performances. I'd like to put his music in front of you for consideration as you build the next edition.\n\nHe played Breakaway Dallas 2026 and has Breakaway Houston upcoming. He has also performed at Green Light Social / Sunset Sessions in Dallas. We are discussing European opportunities for 2027 and would confirm the May dates and travel arrangements with you before any commitment.\n\nHis music and background are here: [Habeeb EPK](https://nightmethodagency.com/habeeb).\n\nWould you consider Habeeb for La Kasbah in 2027? I'd be happy to discuss availability and the right set length if the music fits.\n\nBest,\nJoanna Biehler\nNight Method Agency",
+      "evidence": {
+        "edition": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official homepage advertises 15-16 May 2027 and says programming is forthcoming.",
+          "urls": [
+            "https://marvellous-island.fr/"
+          ]
+        },
+        "applications": {
+          "checkedAt": "2026-09-22",
+          "finding": "No current public artist/DJ call found on the 2027 homepage, contact/navigation pages or targeted edition-specific searches. A historical 2016 competition is not evidence of a 2027 process.",
+          "urls": [
+            "https://marvellous-island.fr/",
+            "https://marvellous-island.fr/contact/"
+          ]
+        },
+        "contact": {
+          "checkedAt": "2026-09-22",
+          "finding": "Nuit Sauvage publishes Laurent Kemler's direct professional email. Radio FG's May 2026 festival programme identifies him as artistic director.",
+          "urls": [
+            "https://www.nuit-sauvage.com/",
+            "https://www.radiofg.com/emission-speciale-marvellous-island"
+          ]
+        },
+        "programming": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official site describes La Kasbah as House / Tech House. Radio FG confirms Nic Fanciulli on the 2026 programme.",
+          "urls": [
+            "https://marvellous-island.fr/",
+            "https://www.radiofg.com/emission-speciale-marvellous-island"
+          ]
+        }
+      }
+    },
+    {
+      "id": "horst-2027",
+      "festival": "Horst Arts & Music Festival 2027",
+      "location": "Vilvoorde, Belgium | 6-8 May 2027",
+      "contact": "Simon Nowak, Head of Music and co-organizer",
+      "email": "info@horstartsandmusic.com",
+      "priority": "5",
+      "subject": "For Simon Nowak: Habeeb / Horst 2027",
+      "action": "RETAINED: first check whether you sent this edition already. If not, route the draft to Simon Nowak through Horst's official inbox; confirm 6-8 May availability.",
+      "fit": "Experimental house / garage connection, but strong local-scene curation makes an overseas emerging booking selective. Not new discovery.",
+      "body": "Hi Simon,\n\nTodd Edwards on Horst's 2026 programme is the connection behind this introduction. I'd like you to hear Habeeb for 2027: a House / Tech House artist with an experimental edge whose sets are dynamic performances.\n\nI'm Joanna Biehler, his manager at Night Method Agency. Horst's interest in artists who contribute something particular to the programme is why I'm approaching you directly, rather than assuming that a festival credit alone establishes the fit. His EPK is the best starting point for that judgment.\n\nHabeeb has played Vice Park and Friends Only, and has an Animarum label showcase in Berlin scheduled for spring 2027. We can discuss a separate Belgium booking and travel plan if the music interests you.\n\nListen and read more: [Habeeb EPK](https://nightmethodagency.com/habeeb).\n\nWould you consider him for Horst 2027? If this reaches the general team, please forward it to Simon or music programming.\n\nBest,\nJoanna Biehler\nNight Method Agency",
+      "evidence": {
+        "edition": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official preregistration page announces 6-8 May 2027. The festival programme reviewed remains 2026; no 2027 lineup found.",
+          "urls": [
+            "https://www.horstartsandmusic.com/pre-register",
+            "https://www.horstartsandmusic.com/festival"
+          ]
+        },
+        "applications": {
+          "checkedAt": "2026-09-22",
+          "finding": "No public 2027 music/DJ call found in official festival, FAQ, news and targeted searches. General references to creative open calls are not treated as confirmed music submissions.",
+          "urls": [
+            "https://www.horstartsandmusic.com/faq/festival",
+            "https://www.horstartsandmusic.com/pre-register"
+          ]
+        },
+        "contact": {
+          "checkedAt": "2026-09-22",
+          "finding": "Official FAQ publishes info@horstartsandmusic.com. February 2026 BRUZZ interview verifies Simon Nowak as head of music and co-organizer. This is a general routing inbox.",
+          "urls": [
+            "https://www.horstartsandmusic.com/faq/festival",
+            "https://www.bruzz.be/select/events-festivals/simon-nowak-van-horst-groei-moet-ook-kansen-creeren-voor-anderen-2026-02-05"
+          ]
+        },
+        "programming": {
+          "checkedAt": "2026-09-22",
+          "finding": "Horst's official 2026 artist page confirms Todd Edwards.",
+          "urls": [
+            "https://www.horstartsandmusic.com/programme/todd-edwards"
+          ]
+        }
+      }
+    }
+  ],
+  "research": [
+    {
+      "id": "monegros-2027",
+      "country": "Spain",
+      "region": "Europe",
+      "deepContactResearch": true,
+      "outcome": "qualified",
+      "reason": "The 2026 conference speaker biography explicitly identifies Victor as music director overseeing Monegros talent curation. Festival footer publishes info@monegrosfestival.com; use as a routing request only.",
+      "urls": [
+        "https://monegrosfestival.com/en/tickets?direct=true",
+        "https://monegrosfestival.com/en/artists",
+        "https://monegrosfestival.com/en/work-with-us",
+        "https://monegrosfestival.com/en/faqs",
+        "https://elrow.com/es/artists-community/artists",
+        "https://funbusinessdays.com/valencia/speakers/victor-de-la-serna/",
+        "https://monegrosfestival.com/en/dj-sets"
+      ],
+      "nextCheck": "Reverify edition, public application status and contact before next run."
+    },
+    {
+      "id": "gottwood-2027",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "deepContactResearch": true,
+      "outcome": "qualified",
+      "reason": "Current festival information publishes info@gottwood.co.uk. May 2026 coverage identifies Tom Carpenter as co-founder; route to him as promoter principal, without claiming a personal inbox.",
+      "urls": [
+        "https://www.gottwood.co.uk/",
+        "https://ra.co/events/2437471",
+        "https://www.gottwood.co.uk/info/",
+        "https://edmidentity.com/2026/05/18/gottwood-best-kept-festival-secrets/",
+        "https://ra.co/events/2187777"
+      ],
+      "nextCheck": "Reverify edition, public application status and contact before next run."
+    },
+    {
+      "id": "houghton-2027",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "deepContactResearch": true,
+      "outcome": "qualified",
+      "reason": "Official contact page publishes info@houghtonfestival.co.uk for general enquiries. June 2026 DJ Mag reporting identifies Craig Richards as founder and creative director; official homepage also credits his musical vision.",
+      "urls": [
+        "https://www.houghtonfestival.co.uk/faqs/",
+        "https://www.houghtonfestival.co.uk/",
+        "https://www.houghtonfestival.co.uk/contact/",
+        "https://djmag.com/news/houghton-2026-line-announced"
+      ],
+      "nextCheck": "Reverify edition, public application status and contact before next run."
+    },
+    {
+      "id": "marvellous-island-2027",
+      "country": "France",
+      "region": "Europe",
+      "deepContactResearch": true,
+      "outcome": "qualified",
+      "reason": "Nuit Sauvage publishes Laurent Kemler's direct professional email. Radio FG's May 2026 festival programme identifies him as artistic director.",
+      "urls": [
+        "https://marvellous-island.fr/",
+        "https://marvellous-island.fr/contact/",
+        "https://www.nuit-sauvage.com/",
+        "https://www.radiofg.com/emission-speciale-marvellous-island"
+      ],
+      "nextCheck": "Reverify edition, public application status and contact before next run."
+    },
+    {
+      "id": "horst-2027",
+      "country": "Belgium",
+      "region": "Europe",
+      "deepContactResearch": true,
+      "outcome": "qualified",
+      "reason": "Official FAQ publishes info@horstartsandmusic.com. February 2026 BRUZZ interview verifies Simon Nowak as head of music and co-organizer. This is a general routing inbox.",
+      "urls": [
+        "https://www.horstartsandmusic.com/pre-register",
+        "https://www.horstartsandmusic.com/festival",
+        "https://www.horstartsandmusic.com/faq/festival",
+        "https://www.bruzz.be/select/events-festivals/simon-nowak-van-horst-groei-moet-ook-kansen-creeren-voor-anderen-2026-02-05",
+        "https://www.horstartsandmusic.com/programme/todd-edwards"
+      ],
+      "nextCheck": "Reverify edition, public application status and contact before next run."
+    },
+    {
+      "id": "love-international-2027",
+      "country": "Croatia",
+      "region": "Europe",
+      "outcome": "blocked",
+      "reason": "Published Team Love route to director Dave Harvey found, but official unlabelled /lineup conflicts with 2027 homepage. Do not assume odd names are placeholders.",
+      "nextCheck": "Resolve roster year with authoritative public announcement before inclusion.",
+      "urls": [
+        "https://www.loveinternationalfestival.com/",
+        "https://www.loveinternationalfestival.com/lineup",
+        "https://www.teamlove.org/love-international",
+        "https://www.bigteamcic.org/who-are-big-team"
+      ],
+      "deepContactResearch": true
+    },
+    {
+      "id": "shambhala-2027",
+      "country": "Canada",
+      "region": "Americas",
+      "outcome": "blocked",
+      "reason": "2027 lineup pending; Rich-E-Rich identified for Fractal Forest. Central crew FAQ says no artist submissions; no legitimate stage-specific contact verified.",
+      "nextCheck": "Find a published Fractal Forest programming route, not the central inbox.",
+      "urls": [
+        "https://www.shambhalamusicfestival.com/lineup",
+        "https://crew.shambhalamusicfestival.com/",
+        "https://www.shambhalamusicfestival.com/blog/2026-fractal-stage-lineup"
+      ],
+      "deepContactResearch": true
+    },
+    {
+      "id": "bahidora-2027",
+      "country": "Mexico",
+      "region": "Americas",
+      "outcome": "blocked",
+      "reason": "Upcoming edition and founder Inigo Villamil identified. ACHE publishes an emergency address, not a suitable booking route.",
+      "nextCheck": "Find a published programming/company enquiry route.",
+      "urls": [
+        "https://bahidora.com/",
+        "https://ache.ooo/proyectos/bahidora/",
+        "https://ache.ooo/contacto/",
+        "https://www.timeoutmexico.mx/ciudad-de-mexico/musica/bahidora-entrevista-inigo-villamil"
+      ],
+      "deepContactResearch": true
+    },
+    {
+      "id": "bass-coast-2027",
+      "country": "Canada",
+      "region": "Americas",
+      "outcome": "excluded",
+      "reason": "Official FAQ announces music applications in late fall; future public process fails this task's criterion.",
+      "nextCheck": "Revisit only a later edition or changed official policy.",
+      "urls": [
+        "https://basscoast.ca/pages/faq"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "future-forest-2027",
+      "country": "Canada",
+      "region": "Americas",
+      "outcome": "excluded",
+      "reason": "Public music application window November 14-January 5 is advertised.",
+      "nextCheck": "Use a separate application workflow if authorized.",
+      "urls": [
+        "https://futureforest.ca/get-involved/"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "groove-and-bass-2027",
+      "country": "Canada",
+      "region": "Americas",
+      "outcome": "excluded",
+      "reason": "Artist applications advertised as opening soon.",
+      "nextCheck": "Use a separate application workflow if authorized.",
+      "urls": [
+        "https://www.groovenbass.com/en"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "groove-cruise-miami-2027",
+      "country": "United States",
+      "region": "Americas",
+      "outcome": "excluded",
+      "reason": "2027 artist lineup has already been announced.",
+      "nextCheck": "Revisit next edition.",
+      "urls": [
+        "https://www.groovecruise.com/blog/groove-cruise-2027-lineup-announcement"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "proper-nye-2026-2027",
+      "country": "United States",
+      "region": "Americas",
+      "outcome": "blocked",
+      "reason": "Scan did not establish a current programming decision-maker and published professional route. Not qualified on lineup status either.",
+      "nextCheck": "Recheck official lineup and establish actual buyer contact.",
+      "urls": [
+        "https://www.propernye.com/"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "ocaso-2027",
+      "country": "Costa Rica",
+      "region": "Americas",
+      "outcome": "blocked",
+      "reason": "Official source reviewed did not provide sufficient upcoming-edition and booking-route evidence.",
+      "nextCheck": "Wait for edition announcement, then verify lineup and buyer.",
+      "urls": [
+        "https://ocasofestival.com/"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "baja-beach-2027",
+      "country": "Mexico",
+      "region": "Americas",
+      "outcome": "excluded",
+      "reason": "Reggaeton-led programming is not a credible priority for this House / Tech House brief.",
+      "nextCheck": "Do not rescreen without material programming change.",
+      "urls": [
+        "https://www.bajabeachfest.com/"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "nxne-2027",
+      "country": "Canada",
+      "region": "Americas",
+      "outcome": "excluded",
+      "reason": "Public artist submission process, not a cold-outreach target under this brief.",
+      "nextCheck": "Separate application workflow only.",
+      "urls": [
+        "https://www.nxne.com/"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "hideout-2027",
+      "country": "Croatia",
+      "region": "Europe",
+      "outcome": "blocked",
+      "reason": "Lineup expected in November. Mark Newton identified, but published contacts reviewed were customer, press or partnerships rather than an appropriate booking route.",
+      "nextCheck": "Find a legitimate programming/promoter enquiry route.",
+      "urls": [
+        "https://hideoutfestival.com/",
+        "https://hideoutfestival.com/contact-us/",
+        "https://www.timeout.com/croatia/news/lets-make-it-happen-celebrating-15-years-of-hideout-in-croatia-021225"
+      ],
+      "deepContactResearch": true
+    },
+    {
+      "id": "dimensions-2027",
+      "country": "Croatia",
+      "region": "Europe",
+      "outcome": "blocked",
+      "reason": "2027 names expected late October/early November. Contact page provides customer services; David Martin source describes a former role, not current authority.",
+      "nextCheck": "Identify current programmer and unrestricted professional route.",
+      "urls": [
+        "https://dimensionsfestival.com/lineup/",
+        "https://dimensionsfestival.com/contact-us/",
+        "https://www.outputbelfast.com/2023speakers/david-martin"
+      ],
+      "deepContactResearch": true
+    },
+    {
+      "id": "outlook-origins-2027",
+      "country": "Croatia",
+      "region": "Europe",
+      "outcome": "blocked",
+      "reason": "2027 dates and general email found; current named programming authority not verified and fit lower than house-led candidates.",
+      "nextCheck": "Verify programmer and specific house/garage programming before drafting.",
+      "urls": [
+        "https://www.outlookorigins.com/faqs"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "field-day-2027",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "outcome": "excluded",
+      "reason": "Official contact policy says artist application emails are not reviewed; general inbox is not a defensible cold-pitch route.",
+      "nextCheck": "Only revisit with a legitimate permitted programming contact or changed policy.",
+      "urls": [
+        "https://www.fielddayfestivals.com/contact"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "snowbombing-2027",
+      "country": "Austria",
+      "region": "Europe",
+      "outcome": "excluded",
+      "reason": "2027 lineup already announced.",
+      "nextCheck": "Revisit next edition.",
+      "urls": [
+        "https://snowbombing.com/"
+      ],
+      "deepContactResearch": false
+    },
+    {
+      "id": "we-out-here-2027",
+      "country": "United Kingdom",
+      "region": "Europe",
+      "outcome": "excluded",
+      "reason": "Official contact page says artist application emails are not reviewed.",
+      "nextCheck": "Do not repurpose customer/general inbox for artist pitches.",
+      "urls": [
+        "https://weoutherefestival.com/contact-us/"
+      ],
+      "deepContactResearch": false
+    }
+  ],
+  "researchSummary": {
+    "screened": 22,
+    "notPreviouslyDelivered": 20,
+    "deepContactResearch": 10,
+    "coverage": "Americas and Europe; Canada, United States, Mexico, Costa Rica, UK, Croatia, Austria, Spain, France, Belgium.",
+    "limitations": "Love International held because official lineup page is ambiguous. No new Americas target passed all gates. General inbox routing is not confirmed delivery to a named programmer."
+  }
+}

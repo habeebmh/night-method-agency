@@ -1,255 +1,132 @@
-import { writeFile } from 'node:fs/promises'
+import { readFile, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { jsPDF } from 'jspdf'
-import { writeValidatedPdfAtomically } from './festival-outreach-output.mjs'
+import { validatePacket, writeValidatedPdfAtomically } from './festival-outreach-output.mjs'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
-const date = process.env.FESTIVAL_OUTREACH_DATE || new Intl.DateTimeFormat('en-CA', {
-  timeZone: 'America/Chicago',
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit',
+const date = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/Chicago', year: 'numeric', month: '2-digit', day: '2-digit',
 }).format(new Date())
-const outputPath = path.join(root, 'output', 'pdf', `Habeeb_Manager_Outreach_${date}.pdf`)
-
-const entries = [
-  {
-    festival: 'Marvellous Island Festival 2027',
-    location: 'Grand Paris / Plage de Torcy, France | May 15-16, 2027',
-    contact: 'Laurent Kemler, Artistic Director and music programmer',
-    email: 'laurent@nuit-sauvage.com',
-    subject: 'Habeeb for Marvellous Island 2027',
-    body: `Hi Laurent,
-
-I'm writing on behalf of Habeeb, a Dallas-based House and Tech House artist, for Marvellous Island's 2027 edition.
-
-La Kasbah's House and Tech House direction is a natural match for a set built around heavy low end, UK Garage and Bassline accents, and an experimental edge. Seeing Dennis Cruz and Nic Fanciulli in the 2026 program also makes the fit clear: Habeeb can bring a dynamic performance that stays grounded in the groove while adding a sharper garage pulse.
-
-He performed at Breakaway Dallas in 2026 and is booked for the upcoming Breakaway Houston. He also has two records released on Animarum as of September 18.
-
-Current music and materials are in the [Habeeb EPK](https://nightmethodagency.com/habeeb).
-
-Would you consider Habeeb for Marvellous Island 2027, particularly La Kasbah or another House-focused stage? I'm happy to share availability and fee guidance.
-
-Best,
-Joanna Biehler
-Night Method Agency`,
-  },
-  {
-    festival: 'Horst Arts & Music Festival 2027',
-    location: 'Asiat Park, Vilvoorde, Belgium | May 6-8, 2027',
-    contact: 'Simon Nowak, Head of Music and co-organizer',
-    email: 'info@horstartsandmusic.com',
-    subject: 'Habeeb for Horst Festival 2027',
-    body: `Hi Simon,
-
-I'm reaching out on behalf of Habeeb, a Dallas-based House and Tech House artist, for Horst Festival 2027.
-
-Horst's pairing of experimental electronic programming with stages shaped around architecture and space suits how Habeeb approaches a set: as a dynamic performance, not a fixed run of tracks. Todd Edwards and Daphni in the 2026 program are useful reference points for the groove, swing, and left-turn energy he brings, with UK Garage and Bassline threaded through his House foundation.
-
-Habeeb performed at Breakaway Dallas in 2026, and he's booked for the upcoming Breakaway Houston. He also has two records released on Animarum and an upcoming Animarum label showcase in Berlin in spring 2027, which makes a European festival date timely.
-
-Current music and materials are in the [Habeeb EPK](https://nightmethodagency.com/habeeb).
-
-Would you consider Habeeb for the 2027 music program? I'd be glad to send availability, fee guidance, and any additional materials.
-
-Best,
-Joanna Biehler
-Night Method Agency`,
-  },
-]
-
-const colors = {
-  navy: [21, 31, 51],
-  muted: [102, 112, 127],
-  accent: [219, 89, 46],
-  light: [241, 243, 245],
-  link: [25, 92, 166],
-}
+const inputPath = path.join(root, 'tasks/festival-outreach', `${date}.json`)
+const historyPath = path.join(root, 'tasks/festival-outreach/delivery-history.json')
+const input = JSON.parse(await readFile(inputPath, 'utf8'))
+const history = JSON.parse(await readFile(historyPath, 'utf8'))
+const packet = validatePacket(input, history, date)
+const entries = [...packet.entries].sort((a, b) =>
+  Number(a.change === 'RETAINED') - Number(b.change === 'RETAINED') || Number(a.priority) - Number(b.priority))
+const outputPath = path.join(root, 'output/pdf', `Habeeb_Manager_Outreach_${date}.pdf`)
+const colors = { navy: [21, 31, 51], muted: [92, 102, 117], accent: [190, 66, 28], link: [25, 92, 166] }
 const margin = 48
-const pageWidth = 612
-const pageHeight = 792
-const contentWidth = pageWidth - margin * 2
-
-function plainText(markdown) {
-  return markdown.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-}
-
-function validateEntry(entry) {
-  for (const field of ['festival', 'contact', 'email', 'subject', 'body']) {
-    if (!entry[field]?.trim()) throw new Error(`${entry.festival || 'Festival'} is missing ${field}.`)
-  }
-
-  const wordCount = plainText(entry.body).trim().split(/\s+/).length
-  if (wordCount < 120 || wordCount > 180) {
-    throw new Error(`${entry.festival} email must be 120-180 words; found ${wordCount}.`)
-  }
-
-  const links = entry.body.match(/https?:\/\/[^)\s]+/g) || []
-  if (links.length !== 1 || links[0] !== 'https://nightmethodagency.com/habeeb') {
-    throw new Error(`${entry.festival} email must contain only the Habeeb EPK link.`)
-  }
-
-  if (/Silo Dallas|genre-fluid/i.test(entry.body)) {
-    throw new Error(`${entry.festival} email contains prohibited positioning.`)
-  }
-}
-
-function addHeaderFooter(doc, pageNumber) {
-  doc.setFillColor(...colors.accent)
-  doc.rect(0, 0, pageWidth, 10, 'F')
-  doc.setFont('helvetica', 'bold')
-  doc.setFontSize(9)
-  doc.setTextColor(...colors.muted)
-  doc.text('NIGHT METHOD AGENCY', margin, 48)
-  doc.setFont('helvetica', 'normal')
-  doc.setFontSize(8)
-  doc.text(`MANAGER OUTREACH PACKET  |  ${date}`, margin, pageHeight - 26)
-  doc.text(String(pageNumber), pageWidth - margin, pageHeight - 26, { align: 'right' })
-}
-
-function drawWrapped(doc, text, x, y, width, options = {}) {
-  const fontSize = options.fontSize || 10.5
-  const leading = options.leading || 14.2
-  doc.setFont('helvetica', options.bold ? 'bold' : 'normal')
-  doc.setFontSize(fontSize)
-  doc.setTextColor(...(options.color || colors.navy))
-  const lines = doc.splitTextToSize(text, width)
-  doc.text(lines, x, y, { lineHeightFactor: leading / fontSize })
-  return y + lines.length * leading
-}
-
-function drawEmailBody(doc, body, x, y, width) {
-  const paragraphs = body.split('\n\n')
-  let cursor = y
-
-  for (const paragraph of paragraphs) {
-    const linkMatch = paragraph.match(/^(.+?)\[Habeeb EPK\]\((https:\/\/nightmethodagency\.com\/habeeb)\)(.*)$/)
-    if (linkMatch) {
-      const [, prefix, url, suffix] = linkMatch
-      doc.setFont('helvetica', 'normal')
-      doc.setFontSize(10.5)
-      doc.setTextColor(...colors.navy)
-      doc.text(prefix, x, cursor)
-      const linkX = x + doc.getTextWidth(prefix)
-      doc.setTextColor(...colors.link)
-      const linkWidth = doc.textWithLink('Habeeb EPK', linkX, cursor, { url })
-      doc.setDrawColor(...colors.link)
-      doc.setLineWidth(0.5)
-      doc.line(linkX, cursor + 1.5, linkX + linkWidth, cursor + 1.5)
-      doc.setTextColor(...colors.navy)
-      doc.text(suffix, linkX + linkWidth, cursor)
-      cursor += 18
-      continue
-    }
-
-    cursor = drawWrapped(doc, paragraph, x, cursor, width)
-    cursor += 5
-  }
-
-  return cursor
-}
+const width = 516
+const bottom = 736
 
 function buildDocument() {
   const doc = new jsPDF({ unit: 'pt', format: 'letter', compress: true })
-  doc.setProperties({
-    title: `Habeeb Manager Outreach ${date}`,
-    author: 'Night Method Agency',
-    subject: 'Send-ready festival booking outreach',
-  })
-
-  addHeaderFooter(doc, 1)
-  doc.setFont('helvetica', 'bold')
-  doc.setTextColor(...colors.navy)
-  doc.setFontSize(42)
-  doc.text('Habeeb', margin, 190)
-  doc.setTextColor(...colors.accent)
-  doc.setFontSize(24)
-  doc.text('Festival Booking Outreach', margin, 232)
-  doc.setTextColor(...colors.muted)
-  doc.setFontSize(11)
-  doc.text('MANAGER OUTREACH PACKET', margin, 270)
-  doc.setFont('helvetica', 'normal')
-  doc.setTextColor(...colors.navy)
-  doc.setFontSize(12)
-  const generatedDate = new Intl.DateTimeFormat('en-US', {
-    timeZone: 'America/Chicago',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  }).format(new Date(`${date}T12:00:00-05:00`))
-  doc.text(`Generated ${generatedDate}`, margin, 300)
-  doc.setDrawColor(...colors.accent)
-  doc.line(margin, 330, pageWidth - margin, 330)
-  drawWrapped(
-    doc,
-    `Two current, send-ready festival opportunities for Habeeb, selected for electronic programming fit and verified booking routes.`,
-    margin,
-    372,
-    contentWidth,
-    { fontSize: 15, leading: 22 },
-  )
-  doc.setFont('helvetica', 'bold')
-  doc.setFontSize(12)
-  doc.text('Prepared for Joanna Biehler', margin, 590)
-  doc.setFont('helvetica', 'normal')
-  doc.setTextColor(...colors.muted)
-  doc.setFontSize(11)
-  doc.text('Night Method Agency', margin, 610)
-
-  entries.forEach((entry, index) => {
-    doc.addPage('letter', 'portrait')
-    addHeaderFooter(doc, index + 2)
+  doc.setProperties({ title: `Habeeb Manager Outreach ${date}`, author: 'Night Method Agency' })
+  let y = 80
+  let page = 0
+  function newPage() {
+    if (page) doc.addPage()
+    page++
+    y = 80
+    doc.setFillColor(...colors.accent)
+    doc.rect(0, 0, 612, 8, 'F')
     doc.setFont('helvetica', 'bold')
-    doc.setFontSize(18)
-    doc.setTextColor(...colors.navy)
-    doc.text(`Festival: ${entry.festival}`, margin, 82)
-    doc.setFont('helvetica', 'normal')
-    doc.setFontSize(10)
     doc.setTextColor(...colors.muted)
-    doc.text(entry.location, margin, 105)
-    doc.setDrawColor(...colors.accent)
-    doc.line(margin, 120, pageWidth - margin, 120)
-
-    let y = 146
-    for (const [label, value] of [
-      ['Booking contact:', entry.contact],
-      ['Email:', entry.email],
-      ['Subject:', entry.subject],
-    ]) {
-      doc.setFont('helvetica', 'bold')
-      doc.setFontSize(10)
-      doc.setTextColor(...colors.navy)
-      doc.text(label, margin, y)
-      doc.setFont('helvetica', 'normal')
-      doc.text(value, margin + 102, y)
-      y += 19
+    doc.setFontSize(9)
+    doc.text('NIGHT METHOD AGENCY', margin, 40)
+    doc.setFont('helvetica', 'normal')
+    doc.setFontSize(8)
+    doc.text(`MANAGER OUTREACH PACKET | ${date}`, margin, 766)
+    doc.text(String(page), 564, 766, { align: 'right' })
+  }
+  function text(value, { size = 10.5, bold = false, color = colors.navy, gap = 7, url } = {}) {
+    doc.setFont('helvetica', bold ? 'bold' : 'normal')
+    doc.setFontSize(size)
+    const lines = doc.splitTextToSize(value, width)
+    const leading = size * 1.35
+    for (const line of lines) {
+      if (y + leading > bottom) newPage()
+      doc.setFont('helvetica', bold ? 'bold' : 'normal')
+      doc.setFontSize(size)
+      doc.setTextColor(...color)
+      if (url) doc.textWithLink(line, margin, y, { url })
+      else doc.text(line, margin, y)
+      y += leading
     }
+    y += gap
+  }
+  newPage()
+  text('Habeeb | Festival Outreach', { size: 26, bold: true })
+  text(`Generated ${date} | Prepared for Joanna Biehler`, { color: colors.muted })
+  const fresh = entries.filter(e => e.change === 'NEW').length
+  const updated = entries.filter(e => e.change === 'CONTACT UPDATED').length
+  const retained = entries.length - fresh - updated
+  text(`${fresh} new opportunities | ${updated} contact updates | ${retained} retained`, { size: 14, bold: true, color: colors.accent })
+  text('Start with the new opportunities below. Retained entries appeared in earlier packets and have not been reported sent to festivals.')
+  text('Manager action queue', { size: 16, bold: true })
+  for (const entry of entries) {
+    if (y > 605) newPage()
+    text(`${entry.change} | ${entry.festival}`, { bold: true, size: 12 })
+    text(entry.action)
+    text(entry.fit, { size: 9, color: colors.muted })
+  }
+  text('Before sending: confirm availability and fee guidance, attach both riders, and check whether you already contacted this exact edition. Report sent editions so they can be removed from future packets.', { size: 9, color: colors.muted })
 
-    doc.setFont('helvetica', 'bold')
-    doc.setFontSize(11)
-    doc.setTextColor(...colors.accent)
-    doc.text('Email copy:', margin, y + 8)
-    y = drawEmailBody(doc, entry.body, margin, y + 30, contentWidth)
+  for (const entry of entries) {
+    newPage()
+    text(`Festival: ${entry.festival}`, { size: 18, bold: true })
+    text(`${entry.change} | ${entry.location}`, { size: 10, color: colors.muted })
+    text(`Booking contact: ${entry.contact}`, { size: 10 })
+    text(`Email: ${entry.email}`, { size: 10 })
+    text(`Subject: ${entry.subject}`, { size: 10, bold: true })
+    text('Email copy:', { size: 11, bold: true, color: colors.accent })
+    for (const paragraph of entry.body.split('\n\n')) {
+      // Keep the EPK as the only hyperlink within the outreach copy.
+      const marker = '[Habeeb EPK](https://nightmethodagency.com/habeeb)'
+      if (paragraph.includes(marker)) {
+        const plain = paragraph.replace(marker, 'Habeeb EPK')
+        if (doc.splitTextToSize(plain, width).length !== 1) throw new Error('EPK sentence must fit on one line.')
+        if (y + 24 > bottom) newPage()
+        doc.setFont('helvetica', 'normal')
+        doc.setFontSize(10.5)
+        doc.setTextColor(...colors.navy)
+        const [prefix, suffix] = paragraph.split(marker)
+        doc.text(prefix, margin, y)
+        const linkX = margin + doc.getTextWidth(prefix)
+        doc.setTextColor(...colors.link)
+        const linkWidth = doc.textWithLink('Habeeb EPK', linkX, y, { url: 'https://nightmethodagency.com/habeeb' })
+        doc.setTextColor(...colors.navy)
+        doc.text(suffix, linkX + linkWidth, y)
+        y += 21
+      } else text(paragraph)
+    }
+    text('Attachments: Technical Rider; Hospitality & Accommodation Rider', { size: 9, bold: true })
+  }
 
-    doc.setFillColor(...colors.light)
-    doc.rect(margin, y + 3, contentWidth, 30, 'F')
-    doc.setFont('helvetica', 'bold')
-    doc.setFontSize(9.5)
-    doc.setTextColor(...colors.navy)
-    doc.text('Attachments: Technical Rider; Hospitality & Accommodation Rider', margin + 10, y + 22)
-  })
-
+  newPage()
+  text('Verification notes for the manager', { size: 18, bold: true })
+  text('These notes are outside the email copy. General inboxes are routing requests, not verified personal inboxes. No public open call found means none was located on the reviewed pages and searches as of the run date; it is not proof that one cannot open later.', { size: 9, color: colors.muted })
+  for (const entry of entries) {
+    if (y > 510) newPage()
+    text(entry.festival, { size: 13, bold: true })
+    for (const [type, evidence] of Object.entries(entry.evidence)) {
+      text(`${type[0].toUpperCase() + type.slice(1)}: ${evidence.finding}`, { size: 9, gap: 3 })
+      evidence.urls.forEach((url, index) => text(`${type} source ${index + 1}: ${new URL(url).hostname}`, {
+        size: 8, color: colors.link, url, gap: 3,
+      }))
+    }
+    y += 8
+  }
   return doc.output('arraybuffer')
 }
 
-entries.forEach(validateEntry)
-
 await writeValidatedPdfAtomically({
-  entries,
-  outputPath,
-  render: async (tempPath) => writeFile(tempPath, new Uint8Array(buildDocument())),
+  entries, outputPath,
+  render: async tempPath => writeFile(tempPath, new Uint8Array(buildDocument())),
 })
-
-console.log(outputPath)
+console.log(JSON.stringify({
+  outputPath, date, entries: entries.map(({ id, change, email }) => ({ id, change, email })),
+  deliveryEligible: true,
+}, null, 2))

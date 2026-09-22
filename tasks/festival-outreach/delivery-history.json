@@ -1,0 +1,65 @@
+{
+  "sentFestivalIds": [
+    "project-glow-2027",
+    "movement-detroit-2027",
+    "dirtybird-campout-northern-nights-2027",
+    "dgtl-amsterdam-2027",
+    "time-warp-germany-2027",
+    "kappa-futurfestival-2027",
+    "extrema-outdoor-belgium-2027",
+    "loveland-2027",
+    "lost-village-2027",
+    "paradise-city-2027",
+    "forbidden-forest-2027"
+  ],
+  "deliveries": [
+    {
+      "date": "2026-09-21",
+      "messageId": "1a0c590f7f0dbe26",
+      "entries": [
+        {
+          "id": "marvellous-island-2027",
+          "contact": "Laurent Kemler, Artistic Director and music programmer",
+          "email": "laurent@nuit-sauvage.com"
+        },
+        {
+          "id": "horst-2027",
+          "contact": "Simon Nowak, Head of Music and co-organizer",
+          "email": "info@horstartsandmusic.com"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "messageId": "1a0ca2774939dd40",
+      "pdfSha256": "dfd9527437c83de44a5c085aacde3a4eec3c3855b838aecff2494ef90231127b",
+      "entries": [
+        {
+          "id": "monegros-2027",
+          "contact": "Victor de la Serna, Music Director, elrow / Monegros / Florida 135",
+          "email": "info@monegrosfestival.com"
+        },
+        {
+          "id": "gottwood-2027",
+          "contact": "Tom Carpenter, Gottwood co-founder",
+          "email": "info@gottwood.co.uk"
+        },
+        {
+          "id": "houghton-2027",
+          "contact": "Craig Richards, founder and creative director",
+          "email": "info@houghtonfestival.co.uk"
+        },
+        {
+          "id": "marvellous-island-2027",
+          "contact": "Laurent Kemler, Artistic Director and music programmer",
+          "email": "laurent@nuit-sauvage.com"
+        },
+        {
+          "id": "horst-2027",
+          "contact": "Simon Nowak, Head of Music and co-organizer",
+          "email": "info@horstartsandmusic.com"
+        }
+      ]
+    }
+  ]
+}
