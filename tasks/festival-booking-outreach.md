@@ -167,7 +167,7 @@ Include one specific sentence demonstrating familiarity with that festival's pro
 
 Include a second specific programming connection when useful by referencing one or two relevant artists the festival has previously booked. Verify each reference during the current run. Keep the artist names in plain text and use them to explain Habeeb's fit, not as a list of borrowed credibility.
 
-Use only 2-3 of Habeeb's strongest and most relevant credentials.
+Every outreach email must mention all four mandatory credits: Breakaway Dallas 2026, Breakaway Houston 2026, opening for James Kennedy, and opening/support for Benjamin Lloyd. Do not omit any of these to meet the word limit; shorten other copy instead.
 
 End with a simple booking-consideration ask.
 
@@ -202,20 +202,25 @@ NEVER reference Silo Dallas or any Silo performance. Habeeb has not played there
 
 Position Habeeb as a House / Tech House artist with an experimental edge whose sets are dynamic performances. Do not describe him as genre-fluid.
 
-Approved current credentials include:
+Mandatory credits for every future outreach email:
 
 - Breakaway Dallas 2026
+- Breakaway Houston 2026
+- Opening for James Kennedy
+- Opening/support for Benjamin Lloyd
+
+Keep completion status accurate. As last confirmed, Breakaway Dallas 2026 and James Kennedy support are completed; Breakaway Houston 2026 and Benjamin Lloyd support are upcoming. Recheck current context each run and change upcoming wording to completed only when confirmed. Do not invent a year for either support appearance.
+
+Optional additional credentials, only when relevant and space permits:
+
 - Green Light Social / Sunset Sessions in Dallas
 - Vice Park
 - Friends Only
-- Upcoming Breakaway Houston
 - Upcoming Animarum Label Showcase in Berlin in spring 2027
-- Opened for James Kennedy
-- Upcoming support/opening appearances for Benjamin Lloyd
 
 Clearly describe upcoming performances as upcoming rather than completed.
 
-Use these selectively based on the target festival. Do not cram every credential into every email.
+The four mandatory credits must appear in every draft. Use optional credentials selectively based on the target festival. Before generating the PDF, check every body for all four credits and the correct status; do not send a packet with an omission.
 
 ## Release history
 
