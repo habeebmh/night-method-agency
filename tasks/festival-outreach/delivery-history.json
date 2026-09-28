@@ -60,6 +60,53 @@
           "email": "info@horstartsandmusic.com"
         }
       ]
+    },
+    {
+      "date": "2026-09-28",
+      "messageId": "1a0e9ab300e43339",
+      "pdfSha256": "ebc79e7d961021d7c0cfbbb330cc6b1f3b47d8541ccaab5a16f73f7c87287955",
+      "entries": [
+        {
+          "id": "north-coast-2027",
+          "contact": "Michael Berg, Partner and Talent Buyer, North Coast Music Festival / Collectiv Presents",
+          "email": "info@northcoastfestival.com"
+        },
+        {
+          "id": "veld-2027",
+          "contact": "Farhad Ghousy, Talent Buyer, INK Entertainment Group",
+          "email": "info@veldmusicfestival.com"
+        },
+        {
+          "id": "awakenings-festival-2027",
+          "contact": "Tim Middelesch, Managing Director, Awakenings",
+          "email": "info@awakenings.nl"
+        },
+        {
+          "id": "monegros-2027",
+          "contact": "Victor de la Serna, Music Director, elrow / Monegros / Florida 135",
+          "email": "info@monegrosfestival.com"
+        },
+        {
+          "id": "gottwood-2027",
+          "contact": "Tom Carpenter, Gottwood co-founder",
+          "email": "info@gottwood.co.uk"
+        },
+        {
+          "id": "houghton-2027",
+          "contact": "Craig Richards, founder and creative director",
+          "email": "info@houghtonfestival.co.uk"
+        },
+        {
+          "id": "marvellous-island-2027",
+          "contact": "Laurent Kemler, Artistic Director and music programmer",
+          "email": "laurent@nuit-sauvage.com"
+        },
+        {
+          "id": "horst-2027",
+          "contact": "Simon Nowak, Head of Music and co-organizer",
+          "email": "info@horstartsandmusic.com"
+        }
+      ]
     }
   ]
 }
